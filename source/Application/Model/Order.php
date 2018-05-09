@@ -2044,7 +2044,7 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     public function validateDeliveryAddress($oUser)
     {
-        $sDelAddressMD5 = $this->getConfig()->getRequestParameter('sDeliveryAddressMD5');
+        $sDelAddressMD5 = \OxidEsales\Eshop\Core\Registry::getSession()->getVariable('sDeliveryAddressMD5');
 
         $sDeliveryAddress = $oUser->getEncodedDeliveryAddress();
 
@@ -2115,6 +2115,9 @@ class Order extends \OxidEsales\Eshop\Core\Model\BaseModel
      */
     public function validatePayment($oBasket)
     {
+
+        $paymentController = oxNew(\OxidEsales\Eshop\Application\Controller\PaymentController::class);
+        $paymentController->validatePayment();
         // We force reading from master to prevent issues with slow replications or open transactions (see ESDEV-3804).
         $masterDb = \OxidEsales\Eshop\Core\DatabaseProvider::getMaster();
 

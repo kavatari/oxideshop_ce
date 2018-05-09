@@ -166,6 +166,18 @@ class OrderController extends \OxidEsales\Eshop\Application\Controller\FrontendC
                 // redirecting to payment step on error ..
                 \OxidEsales\Eshop\Core\Registry::getUtils()->redirect($myConfig->getShopCurrentURL() . '&cl=payment', true, 302);
             }
+
+            // Fixate shipping and billing address. A user should not be able to modify them after this point.
+
+            $md5 = \OxidEsales\Eshop\Core\Registry::getSession()->getVariable(     'sDeliveryAddressMD5');
+            if(!$md5)
+            {
+                \OxidEsales\Eshop\Core\Registry::getSession()->setVariable(
+                    'sDeliveryAddressMD5',
+                    $this->getDeliveryAddressMD5()
+                );
+            }
+
         }
 
         parent::render();
