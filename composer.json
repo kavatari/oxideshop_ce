@@ -13,19 +13,12 @@
         "phpmailer/phpmailer": "^v5.2.22",
         "smarty/smarty": "^v2.6.30",
         "doctrine/dbal": "^v2.5.12",
-        "monolog/monolog": "^v1.23.0",
-        "psr/container": "1.0.*",
-        "symfony/config": "~2.8|~3.0",
-        "symfony/dependency-injection": "^3.1"
+        "oxid-esales/oxideshop-pe": "dev-b-6.x",
+        "oxid-esales/oxideshop-ee": "dev-flow_theme_acc_tests-ARC-24",
+        "codeception/codeception": "^2.3",
+        "symfony/translation": "^3.1"
     },
     "require-dev": {
-        "oxid-esales/flow-theme": "^v3.0.0",
-        "oxid-esales/oxideshop-doctrine-migration-wrapper": "^v2.1.0",
-        "oxid-esales/oxideshop-db-views-generator": "^v1.1.1",
-        "doctrine/dbal": "^v2.5.12",
-        "oxid-esales/oxideshop-demodata-installer": "^v1.1.0",
-        "oxid-esales/oxideshop-composer-plugin": "^v2.0.0",
-        "oxid-esales/oxideshop-unified-namespace-generator": "dev-master || ^1.0.0",
         "oxid-esales/testing-library": "dev-master",
         "oxid-esales/coding-standards": "^v3.0.2",
         "oxid-esales/coding-standards-wrapper": "dev-master",
