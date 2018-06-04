@@ -6,9 +6,6 @@
 
 namespace OxidEsales\EshopCommunity\Application\Model;
 
-use oxRegistry;
-use oxDb;
-
 /**
  * Diagnostic tool model
  * Stores configuration and public diagnostic methods for shop diagnostics
@@ -36,71 +33,6 @@ class Diagnostics
      * @var string
      */
     protected $_sShopLink = "";
-
-    /**
-     * Array of all files and folders in shop root folder which are to be checked
-     *
-     * @var array
-     */
-    protected $_aFileCheckerPathList = [
-        'bootstrap.php',
-        'index.php',
-        'oxid.php',
-        'oxseo.php',
-        'admin/',
-        'Application/',
-        'bin/',
-        'Core/',
-        'modules/',
-    ];
-
-    /**
-     * Array of file extensions which are to be checked
-     *
-     * @var array
-     */
-    protected $_aFileCheckerExtensionList = ['php', 'tpl'];
-
-    /**
-     * Setter for list of files and folders to check
-     *
-     * @param array $aPathList Path list.
-     */
-    public function setFileCheckerPathList($aPathList)
-    {
-        $this->_aFileCheckerPathList = $aPathList;
-    }
-
-    /**
-     * getter for list of files and folders to check
-     *
-     * @return $this->_aFileCheckerPathList array
-     */
-    public function getFileCheckerPathList()
-    {
-        return $this->_aFileCheckerPathList;
-    }
-
-    /**
-     * Setter for extensions of files to check
-     *
-     * @param array $aExtList List of extensions.
-     */
-    public function setFileCheckerExtensionList($aExtList)
-    {
-        $this->_aFileCheckerExtensionList = $aExtList;
-    }
-
-    /**
-     * getter for extensions of files to check
-     *
-     * @return $this->_aFileCheckerExtensionList array
-     */
-    public function getFileCheckerExtensionList()
-    {
-        return $this->_aFileCheckerExtensionList;
-    }
-
 
     /**
      * Version setter
@@ -274,7 +206,7 @@ class Diagnostics
     public function getServerInfo()
     {
         // init empty variables (can be filled if exec is allowed)
-        $iCpuAmnt = $iCpuMhz = $iBogo = $iMemTotal = $iMemFree = $sCpuModelName = $sCpuModel = $sCpuFreq = $iCpuCores = null;
+        $iMemTotal = $iMemFree = $sCpuModelName = $sCpuModel = $sCpuFreq = $iCpuCores = null;
 
         // fill, if exec is allowed
         if ($this->isExecAllowed()) {
