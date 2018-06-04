@@ -1912,8 +1912,7 @@ $aLang = [
     'OXDIAG_INTROINFORMATION_CONTACT_US'             => 'You can contact us using',
     'OXDIAG_INTROINFORMATION_ONLINE_CONTACT_FORM'    => 'Online Contact Form',
 
-    'OXDIAG_FORM_LIST_ALL_FILES' => 'List all files (also those which were OK)',
-    'OXDIAG_FORM_START_CHECK'    => 'Start to check this eShop right now (may take some time)',
+    'OXDIAG_FORM_START_CHECK'    => 'Start diagnostics',
 
     'OXDIAG_RESULT_SUCCESSFUL'            => 'Diagnostics check successful.',
     'OXDIAG_RESULT'                       => 'Diagnostics check result',
@@ -1951,10 +1950,6 @@ $aLang = [
     'OXDIAG_COLLECT_HEALTH'           => 'Poll system health status',
     'OXDIAG_COLLECT_PHP'              => 'Poll PHP configuration (selected parameters)',
     'OXDIAG_COLLECT_SERVER'           => 'Poll system information (if possible)',
-    'OXDIAG_COLLECT_CHKVERS'          => 'Run <i>Version checker</i>',
-    'OXDIAG_COLLECT_CHKVERS_DURATION' => 'This can engross the execution time of the module or execution might fail.',
-    'OXDIAG_COLL_CHKV_NOTINST'        => '<i>Version checker</i> is not installed on this system. You may <a href="http://exchange.oxid-esales.com/OXID-oxid-oxid/Additional-OXID-Extensions/OXDIAG-3-1-0-Stable-CE-4-0-x-4-7-x.html">download the file from OXID eXchange</a> and install it in the root directory of the shop.',
-    'OXDIAG_COLL_CHKV_FILE_GET'       => 'The function <i>file_get_contents</i> is not available, <i>Version checker</i> cannot be accessed.',
     'OXDIAG_STORE_ANALYSIS'           => 'Store results',
     'OXDIAG_COLLECT_START'            => 'Start analysis!',
 
